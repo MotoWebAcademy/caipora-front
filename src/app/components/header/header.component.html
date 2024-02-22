@@ -1,0 +1,21 @@
+<div class="navbar">
+    <div class="container">
+        <div class="logo">Dicionário Moto Academy</div>
+        <form (ngSubmit)="pesquisar()" class="search-bar">
+            <input type="text" placeholder="Pesquisar..." [(ngModel)]="termoPesquisa" name="termoPesquisa">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </div>
+  </div>
+  
+  <div class="resultado">
+    <div class="resultados-pesquisa" *ngIf="resultados && resultados.length > 0">
+      <ul>
+          <li *ngFor="let resultado of resultados">
+              {{resultado.nome}}
+          </li>
+      </ul>
+    </div>
+  </div>
+  
+  
