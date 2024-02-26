@@ -1,0 +1,19 @@
+<div id="searchContainer">
+    <label for="word">Palavra:</label>
+    <input type="text" id="word" [(ngModel)]="palavra">
+    <button (click)="searchWord()">Pesquisar</button>
+    <button (click)="speakWord()">🔊 Falar</button>
+</div>
+
+<div id="resultContainer" class="result">
+    <h2>Palavra: {{ result?.word }}</h2>
+    <div class="property">
+        <strong>Significado: </strong><span>{{ result?.meaning }}</span>
+    </div>
+    <div class="property">
+        <strong>Informações Adicionais: </strong><span>{{ result?.additionalInfo }}</span>
+    </div>
+    <div class="property">
+        <strong>Frases: </strong><span>{{ result?.phrases }}</span>
+    </div>
+</div>
